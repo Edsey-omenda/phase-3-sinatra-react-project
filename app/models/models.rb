@@ -1,4 +1,4 @@
-class Models  < ActiveRecord::Base
+class Model  < ActiveRecord::Base
 
-    
+
 end
