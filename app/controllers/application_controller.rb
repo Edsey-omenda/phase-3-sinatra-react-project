@@ -25,4 +25,12 @@ class ApplicationController < Sinatra::Base
     model.to_json
   end
 
+  patch "/models/:id" do
+    update_model = Model.find(params[:id])
+    update_model.update(
+      release_date: params[:release_date]
+    )
+    update_model.to_json
+  end
+
 end
