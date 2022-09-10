@@ -3,11 +3,11 @@
 ENV['RACK_ENV'] ||= "development"
 
 # Require in Gems
-require "dotenv/load"
+# require "dotenv/load"
 require 'bundler/setup'
 Bundler.require(:default, ENV['RACK_ENV'])
 
 
-set :database_file, "./database.yml"
+# set :database_file, "./database.yml"
 # Require in all files in 'app' directory
 require_all 'app'
