@@ -15,12 +15,12 @@
 #   <<: *default
 #   database: flatiron_mod3_production
 
-development:
-  adapter: sqlite3
-  encoding: unicode
-  database: db/development.db
-  host: localhost
-  pool: 5
+# development:
+#   adapter: sqlite3
+#   encoding: unicode
+#   database: db/development.db
+#   host: localhost
+#   pool: 5
 
 production:
   adapter: postgresql

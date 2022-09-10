@@ -17,6 +17,7 @@ gem "rack-contrib", "~> 2.3"
 gem "rack-cors", "~> 1.1"
 
 # An object-relational mapper
+gem 'sinatra-contrib', '~> 2.2', '>= 2.2.2',require: false
 # https://guides.rubyonrails.org/active_record_basics.html
 gem "activerecord", "~> 6.1"
 
@@ -45,7 +46,7 @@ group :development do
 end
 
 group :production do
-  gem "pg", "~> 1.4"
+  gem 'pg', '~> 1.4', '>= 1.4.3'
 end
 
 # These gems will only be used when we are running tests
