@@ -33,4 +33,33 @@ class ApplicationController < Sinatra::Base
     update_model.to_json
   end
 
+  get "/fans" do
+    fans =Fan.all.order(:created_at)
+    fans.to_json
+  end
+
+  post '/fans' do
+    fans = Fan.create(
+      username: params[:username],
+      comment: params[:comment],
+      model_id: params[:model_id]
+    )
+    fans.to_json
+  end
+
+
+  delete '/fans/:id' do
+    fans  = Fan.find(params[:id])
+    fans.destroy
+    fans.to_json
+  end
+
+  patch "/fans/:id" do
+    update_fan = Fan.find(params[:id])
+    update_fan.update(
+      comment: params[:comment]
+    )
+    update_fan.to_json
+  end
+
 end
