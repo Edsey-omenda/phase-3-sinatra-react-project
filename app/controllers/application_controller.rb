@@ -38,7 +38,7 @@ class ApplicationController < Sinatra::Base
     fans.to_json
   end
 
-  post '/fans' do
+  post "/fans" do
     fans = Fan.create(
       username: params[:username],
       comment: params[:comment],
